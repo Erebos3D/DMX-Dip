@@ -1,4 +1,6 @@
 # DMX-Dip
 A Dip for NTCs C.H.I.P to control lights, leds and more.
 
-For further information please visit [here](https://bbs.nextthing.co/t/yet-to-be-named-dmx-dip-control-spotlights-etc-program-lightshows-and-more/9016).
+Have a look at the ongoing development of version 1.0 [here](https://github.com/Erebos3D/DMX-Dip/tree/dev1.0).
+
+The files are for KiCad, *not EAGLE*.
