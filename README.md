@@ -5,6 +5,8 @@ A Dip for NTCs C.H.I.P to control lights, leds and more.
 For a more detailed description please visit [this forum thread](https://bbs.nextthing.co/t/yet-to-be-named-dmx-dip-control-spotlights-etc-program-lightshows-and-more/9016).  
 C.H.I.P by [NTC](https://getchip.com/).
 
+The files are KiCad files, *not EAGLE*.
+
 ---
 Development for v1.0:
 
