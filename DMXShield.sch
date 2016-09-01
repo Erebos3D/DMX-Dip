@@ -28,9 +28,9 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:maxim
 LIBS:dc-dc
-LIBS:misc_jakob
+LIBS:maxim
+LIBS:misc
 LIBS:DMXShield-cache
 EELAYER 25 0
 EELAYER END
@@ -67,17 +67,6 @@ F 2 "" H 2950 1250 50  0000 C CNN
 F 3 "" H 2950 1250 50  0000 C CNN
 	1    2950 1250
 	1    0    0    -1  
-$EndComp
-$Comp
-L C C2
-U 1 1 56DDC2F9
-P 3550 1150
-F 0 "C2" H 3575 1250 50  0000 L CNN
-F 1 "10u" H 3575 1050 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D5_L11_P2.5" H 3588 1000 50  0001 C CNN
-F 3 "" H 3550 1150 50  0000 C CNN
-	1    3550 1150
-	0    1    1    0   
 $EndComp
 $Comp
 L GND #PWR02
@@ -151,7 +140,7 @@ U 1 1 56DDD4DF
 P 6850 2600
 F 0 "C4" H 6875 2700 50  0000 L CNN
 F 1 "22pF" H 6875 2500 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 6888 2450 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 6888 2450 50  0001 C CNN
 F 3 "" H 6850 2600 50  0000 C CNN
 	1    6850 2600
 	0    1    1    0   
@@ -162,7 +151,7 @@ U 1 1 56DDD595
 P 6850 3050
 F 0 "C3" H 6875 3150 50  0000 L CNN
 F 1 "22pF" H 6875 2950 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D3_P2.5" H 6888 2900 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805" H 6888 2900 50  0001 C CNN
 F 3 "" H 6850 3050 50  0000 C CNN
 	1    6850 3050
 	0    1    1    0   
@@ -184,7 +173,7 @@ U 1 1 56DE0E54
 P 5950 6950
 F 0 "K1" H 6100 7200 50  0000 C CNN
 F 1 "XLR3" H 6150 6700 50  0000 C CNN
-F 2 "MyLib1:XLR_Angled_Silk" H 5950 6950 50  0001 C CNN
+F 2 "MyLib1:XLR_Angled_DoubleWay" H 5950 6950 50  0001 C CNN
 F 3 "" H 5950 6950 50  0000 C CNN
 	1    5950 6950
 	-1   0    0    1   
@@ -206,7 +195,7 @@ U 1 1 571820D8
 P 6250 1100
 F 0 "Q1" H 6550 1150 50  0000 R CNN
 F 1 "Q_NMOS_GDS" H 6900 1050 50  0000 R CNN
-F 2 "MyLib1:IRLU_THT_Upstanding" H 6450 1200 50  0001 C CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-2Lead" H 6450 1200 50  0001 C CNN
 F 3 "" H 6250 1100 50  0000 C CNN
 	1    6250 1100
 	1    0    0    -1  
@@ -228,7 +217,7 @@ U 1 1 57183534
 P 6500 1550
 F 0 "Q2" H 6800 1600 50  0000 R CNN
 F 1 "Q_NMOS_GDS" H 7150 1500 50  0000 R CNN
-F 2 "MyLib1:IRLU_THT_Upstanding" H 6700 1650 50  0001 C CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-2Lead" H 6700 1650 50  0001 C CNN
 F 3 "" H 6500 1550 50  0000 C CNN
 	1    6500 1550
 	1    0    0    -1  
@@ -239,7 +228,7 @@ U 1 1 571835DC
 P 6700 2000
 F 0 "Q3" H 7000 2050 50  0000 R CNN
 F 1 "Q_NMOS_GDS" H 7350 1950 50  0000 R CNN
-F 2 "MyLib1:IRLU_THT_Upstanding" H 6900 2100 50  0001 C CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-2Lead" H 6900 2100 50  0001 C CNN
 F 3 "" H 6700 2000 50  0000 C CNN
 	1    6700 2000
 	1    0    0    -1  
@@ -294,7 +283,7 @@ U 1 1 572F9D17
 P 7950 4150
 F 0 "RESET1" H 8100 4260 50  0000 C CNN
 F 1 "SW_PUSH" H 7950 4070 50  0000 C CNN
-F 2 "MyLib1:SWITCH_SMALL" H 7950 4150 50  0001 C CNN
+F 2 "MyLib1:Switch_Plus_Connector" H 7950 4150 50  0001 C CNN
 F 3 "" H 7950 4150 50  0000 C CNN
 	1    7950 4150
 	1    0    0    -1  
@@ -344,8 +333,6 @@ Text GLabel 1400 2750 0    60   Input ~ 0
 LCD-CLK
 Text GLabel 1400 2850 0    60   Input ~ 0
 LCD-VSYNC
-Text GLabel 9750 1050 2    60   Input ~ 0
-5V
 Text GLabel 9750 1150 2    60   Input ~ 0
 HPL
 Text GLabel 9750 1250 2    60   Input ~ 0
@@ -384,12 +371,10 @@ Text GLabel 2850 1150 0    60   Input ~ 0
 5V
 Text GLabel 2850 1250 0    60   Input ~ 0
 GND
-Text GLabel 5500 3400 1    60   Input ~ 0
+Text GLabel 5700 3400 2    60   Input ~ 0
 TWI1-SDA
-Text GLabel 5600 3400 1    60   Input ~ 0
+Text GLabel 5700 3500 2    60   Input ~ 0
 TWI1-SCK
-Text GLabel 1400 1150 0    60   Input ~ 0
-5V
 Text GLabel 1400 2950 0    60   Input ~ 0
 GND
 Text GLabel 9750 2950 2    60   Input ~ 0
@@ -457,7 +442,7 @@ U 1 1 57A666AD
 P 2650 5550
 F 0 "U1" H 2450 5850 50  0000 L CNN
 F 1 "6N136" H 2650 5850 50  0000 L CNN
-F 2 "MyLib1:DIP-8_SMD" H 2450 5250 50  0000 L CIN
+F 2 "MyLib1:DIP-8_SMD_Smaller" H 2450 5250 50  0000 L CIN
 F 3 "" H 2650 5550 50  0000 L CNN
 	1    2650 5550
 	-1   0    0    -1  
@@ -468,7 +453,7 @@ U 1 1 57A667B0
 P 2650 7050
 F 0 "U3" H 2450 7350 50  0000 L CNN
 F 1 "6N136" H 2650 7350 50  0000 L CNN
-F 2 "MyLib1:DIP-8_SMD" H 2450 6750 50  0001 L CIN
+F 2 "MyLib1:DIP-8_SMD_Smaller" H 2450 6750 50  0001 L CIN
 F 3 "" H 2650 7050 50  0000 L CNN
 	1    2650 7050
 	1    0    0    -1  
@@ -479,7 +464,7 @@ U 1 1 57A6685F
 P 2650 6300
 F 0 "U2" H 2450 6600 50  0000 L CNN
 F 1 "6N136" H 2650 6600 50  0000 L CNN
-F 2 "MyLib1:DIP-8_SMD" H 2450 6000 50  0001 L CIN
+F 2 "MyLib1:DIP-8_SMD_Smaller" H 2450 6000 50  0001 L CIN
 F 3 "" H 2650 6300 50  0000 L CNN
 	1    2650 6300
 	1    0    0    -1  
@@ -634,7 +619,6 @@ Wire Wire Line
 	3700 1150 4350 1150
 Wire Wire Line
 	3200 1450 3400 1450
-Connection ~ 3200 1150
 Wire Wire Line
 	3700 1450 3700 1150
 Wire Wire Line
@@ -678,16 +662,16 @@ Wire Wire Line
 	7200 3050 7200 2600
 Connection ~ 7200 2600
 Wire Wire Line
-	5300 3500 5600 3500
+	5300 3500 5700 3500
 Wire Wire Line
-	5500 3400 5300 3400
+	5300 3400 5700 3400
 Wire Wire Line
 	4200 6500 4200 6700
 Connection ~ 4200 6600
 Wire Wire Line
 	5300 3850 6250 3850
 Wire Wire Line
-	5950 6500 5950 6600
+	5950 6100 5950 6600
 Wire Wire Line
 	5600 6950 5200 6950
 Wire Wire Line
@@ -742,8 +726,6 @@ Wire Wire Line
 Wire Wire Line
 	9300 1150 9750 1150
 Wire Wire Line
-	9300 1050 9750 1050
-Wire Wire Line
 	9300 1250 9750 1250
 Wire Wire Line
 	9300 1350 9750 1350
@@ -777,8 +759,6 @@ Wire Wire Line
 	9300 2850 9750 2850
 Wire Wire Line
 	3400 2150 3200 2150
-Wire Wire Line
-	1500 1150 1400 1150
 Wire Wire Line
 	1400 2950 1500 2950
 Wire Wire Line
@@ -834,8 +814,6 @@ Wire Wire Line
 	5850 2350 5300 2350
 Wire Wire Line
 	5950 1100 5950 4350
-Wire Wire Line
-	5600 3500 5600 3400
 Wire Wire Line
 	8100 4350 8250 4350
 Wire Wire Line
@@ -906,20 +884,16 @@ Connection ~ 9000 5200
 $Comp
 L GND #PWR09
 U 1 1 57A890FC
-P 7400 5500
-F 0 "#PWR09" H 7400 5250 50  0001 C CNN
-F 1 "GND" H 7400 5350 50  0000 C CNN
-F 2 "" H 7400 5500 50  0000 C CNN
-F 3 "" H 7400 5500 50  0000 C CNN
-	1    7400 5500
+P 7150 5300
+F 0 "#PWR09" H 7150 5050 50  0001 C CNN
+F 1 "GND" H 7150 5150 50  0000 C CNN
+F 2 "" H 7150 5300 50  0000 C CNN
+F 3 "" H 7150 5300 50  0000 C CNN
+	1    7150 5300
 	1    0    0    -1  
 $EndComp
-Text GLabel 7400 5200 0    60   Input ~ 0
+Text GLabel 7450 5500 0    60   Input ~ 0
 5V
-Wire Wire Line
-	7400 5200 7550 5200
-Wire Wire Line
-	7550 5500 7400 5500
 Wire Wire Line
 	9000 5700 9000 5500
 Connection ~ 9000 5500
@@ -982,11 +956,11 @@ Text GLabel 2200 6200 0    60   Input ~ 0
 5V
 Text GLabel 2200 6950 0    60   Input ~ 0
 5V
-Text GLabel 6250 3750 2    60   Input ~ 0
+Text GLabel 4400 4800 0    60   Input ~ 0
 RX
-Text GLabel 6250 3850 2    60   Input ~ 0
+Text GLabel 4400 4900 0    60   Input ~ 0
 TX
-Text GLabel 6250 3950 2    60   Input ~ 0
+Text GLabel 4400 5000 0    60   Input ~ 0
 DIRECTION
 Text GLabel 1350 5650 0    60   Input ~ 0
 RX
@@ -1038,9 +1012,7 @@ Wire Wire Line
 Wire Wire Line
 	3350 5650 2950 5650
 Wire Wire Line
-	4200 6300 4000 6300
-Wire Wire Line
-	4000 6300 4000 5650
+	4000 6300 4200 6300
 Wire Wire Line
 	4000 5650 3650 5650
 Text GLabel 3350 5450 2    60   Input ~ 0
@@ -1057,17 +1029,13 @@ Connection ~ 3150 6100
 Wire Wire Line
 	2950 6400 3800 6400
 Wire Wire Line
-	3800 6400 3800 6600
-Wire Wire Line
 	3800 6600 4200 6600
 Connection ~ 3150 6400
 Wire Wire Line
 	2950 6850 3350 6850
 Connection ~ 3150 6850
 Wire Wire Line
-	2950 7150 4000 7150
-Wire Wire Line
-	4000 7150 4000 6900
+	4000 6900 4000 7300
 Wire Wire Line
 	4000 6900 4200 6900
 Connection ~ 3150 7150
@@ -1087,7 +1055,7 @@ U 1 1 57A94FB5
 P 1600 3900
 F 0 "BT1" H 1750 4010 50  0000 C CNN
 F 1 "SW_PUSH" H 1600 3820 50  0000 C CNN
-F 2 "MyLib1:SWITCH_SMALL" H 1600 3900 50  0001 C CNN
+F 2 "MyLib1:Switch_Plus_Connector" H 1600 3900 50  0001 C CNN
 F 3 "" H 1600 3900 50  0000 C CNN
 	1    1600 3900
 	1    0    0    -1  
@@ -1142,7 +1110,7 @@ U 1 1 57AAC63F
 P 2100 3900
 F 0 "SJP1" H 2150 3800 50  0000 L CNN
 F 1 "JUMPER3" H 2100 4000 50  0000 C BNN
-F 2 "MyLib1:Solder_Jumper_3" H 2100 3900 50  0001 C CNN
+F 2 "MyLib1:Solder_Jumper_3_SMALL" H 2100 3900 50  0001 C CNN
 F 3 "" H 2100 3900 50  0000 C CNN
 	1    2100 3900
 	0    1    1    0   
@@ -1181,8 +1149,6 @@ Wire Wire Line
 Connection ~ 1250 3900
 Wire Wire Line
 	2050 4650 2400 4650
-Wire Wire Line
-	2850 1150 3400 1150
 Text GLabel 8550 1050 0    60   Input ~ 0
 GND
 Text GLabel 8550 2050 0    60   Input ~ 0
@@ -1203,10 +1169,226 @@ Wire Wire Line
 	2150 1150 2000 1150
 Wire Wire Line
 	2150 1550 2000 1550
-Text Notes 6650 5050 0    60   ~ 0
-Obviously GND and 5V \nare switched here
-Text Notes 2000 4600 0    60   ~ 0
-Add a pull-up resistor\nto 3V3 here
-Text Notes 3200 1000 0    60   ~ 0
-One might be enough\n
+Text Notes 2900 1050 0    60   ~ 0
+One should be enough. Removed C2.\n
+Wire Wire Line
+	2850 1150 3200 1150
+Text Notes 550  1050 0    60   ~ 0
+Disconnected 5V\ntray to protect\nfrom backflow\nvia ICSP
+$Comp
+L D_Schottky_x2_ACom_KKA D1
+U 1 1 57C81CEE
+P 9550 700
+F 0 "D1" H 9600 600 50  0000 C CNN
+F 1 "D_Schottky_x2_ACom_KKA" H 9550 800 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 9550 700 50  0001 C CNN
+F 3 "" H 9550 700 50  0000 C CNN
+	1    9550 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 1050 9550 1050
+Wire Wire Line
+	9550 1050 9550 900 
+Text GLabel 9150 700  0    60   Input ~ 0
+5V
+Wire Wire Line
+	9150 700  9250 700 
+Wire Wire Line
+	7150 5300 7150 5200
+Wire Wire Line
+	7150 5200 7550 5200
+Wire Wire Line
+	7450 5500 7550 5500
+Text GLabel 2400 4850 2    60   Input ~ 0
+3V3
+$Comp
+L R R10
+U 1 1 57C85670
+P 2200 4850
+F 0 "R10" V 2280 4850 50  0000 C CNN
+F 1 "4K7" V 2200 4850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2130 4850 50  0001 C CNN
+F 3 "" H 2200 4850 50  0000 C CNN
+	1    2200 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2350 4850 2400 4850
+Wire Wire Line
+	2050 4850 2050 4700
+Wire Wire Line
+	2050 4700 2100 4700
+Wire Wire Line
+	2100 4700 2100 4650
+Connection ~ 2100 4650
+$Comp
+L XLR3 K2
+U 1 1 57C873EB
+P 6500 6450
+F 0 "K2" H 6650 6700 50  0000 C CNN
+F 1 "XLR3" H 6700 6200 50  0000 C CNN
+F 2 "MyLib1:XLR_Angled_DoubleWay" H 6500 6450 50  0001 C CNN
+F 3 "" H 6500 6450 50  0000 C CNN
+	1    6500 6450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 6950 5550 7300
+Wire Wire Line
+	5550 7300 6150 7300
+Wire Wire Line
+	6150 7300 6150 6450
+Connection ~ 5550 6950
+Wire Wire Line
+	6400 6950 6400 6750
+Wire Wire Line
+	6400 6750 6850 6750
+Wire Wire Line
+	6850 6750 6850 6450
+Connection ~ 6400 6950
+Wire Wire Line
+	5950 6100 6500 6100
+Connection ~ 5950 6500
+Text GLabel 10400 700  2    60   Input ~ 0
+X_5V
+Wire Wire Line
+	9850 700  10400 700 
+Text GLabel 5400 4150 2    60   Input ~ 0
+X_IO0
+Text GLabel 5400 4250 2    60   Input ~ 0
+X_IO1
+Text GLabel 5400 4450 2    60   Input ~ 0
+X_IO2
+Text GLabel 5400 2150 2    60   Input ~ 0
+X_IO3
+Wire Wire Line
+	5300 2150 5400 2150
+Wire Wire Line
+	5300 4150 5400 4150
+Wire Wire Line
+	5300 4250 5400 4250
+Wire Wire Line
+	5300 4450 5400 4450
+Text GLabel 5450 3000 2    60   Input ~ 0
+X_ADC0
+Text GLabel 5450 3100 2    60   Input ~ 0
+X_ADC1
+Wire Wire Line
+	5300 3000 5450 3000
+Wire Wire Line
+	5300 3100 5450 3100
+Text GLabel 9900 3400 0    60   Input ~ 0
+X_5V
+Text GLabel 9900 3500 0    60   Input ~ 0
+X_IO0
+Text GLabel 9900 3600 0    60   Input ~ 0
+X_IO1
+Text GLabel 9900 3700 0    60   Input ~ 0
+X_IO2
+Text GLabel 9900 3800 0    60   Input ~ 0
+X_IO3
+Text GLabel 10600 3400 2    60   Input ~ 0
+X_ADC0
+Text GLabel 10600 3500 2    60   Input ~ 0
+X_ADC1
+Text GLabel 10600 3700 2    60   Input ~ 0
+TWI1-SDA
+Text GLabel 10600 3600 2    60   Input ~ 0
+TWI1-SCK
+$Comp
+L CONN_02X05 X1
+U 1 1 57C95546
+P 10250 3600
+F 0 "X1" H 10250 3900 50  0000 C CNN
+F 1 "CONN_02X05" H 10250 3300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 10250 2400 50  0001 C CNN
+F 3 "" H 10250 2400 50  0000 C CNN
+	1    10250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 57C9659F
+P 10600 3800
+F 0 "#PWR012" H 10600 3550 50  0001 C CNN
+F 1 "GND" H 10600 3650 50  0000 C CNN
+F 2 "" H 10600 3800 50  0000 C CNN
+F 3 "" H 10600 3800 50  0000 C CNN
+	1    10600 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 3400 10000 3400
+Wire Wire Line
+	9900 3500 10000 3500
+Wire Wire Line
+	9900 3600 10000 3600
+Wire Wire Line
+	9900 3700 10000 3700
+Wire Wire Line
+	9900 3800 10000 3800
+Wire Wire Line
+	10500 3400 10600 3400
+Wire Wire Line
+	10500 3500 10600 3500
+Wire Wire Line
+	10500 3600 10600 3600
+Wire Wire Line
+	10500 3700 10600 3700
+Wire Wire Line
+	10500 3800 10600 3800
+Wire Wire Line
+	3800 6400 3800 6600
+Wire Wire Line
+	4000 5550 4000 6300
+$Comp
+L CONN_01X03 JP2
+U 1 1 57CA2A5F
+P 4150 5350
+F 0 "JP2" H 4150 5550 50  0000 C CNN
+F 1 "CONN_01X03" V 4250 5350 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 4150 5350 50  0001 C CNN
+F 3 "" H 4150 5350 50  0000 C CNN
+	1    4150 5350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_01X03 JP1
+U 1 1 57CA2CE2
+P 4600 4900
+F 0 "JP1" H 4600 5100 50  0000 C CNN
+F 1 "CONN_01X03" V 4700 4900 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 4600 4900 50  0001 C CNN
+F 3 "" H 4600 4900 50  0000 C CNN
+	1    4600 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 5550 4000 5550
+Connection ~ 4000 5650
+Wire Wire Line
+	4150 5550 4150 6600
+Connection ~ 4150 6600
+Connection ~ 4000 7150
+Wire Wire Line
+	4250 5550 4450 5550
+Wire Wire Line
+	4450 5550 4450 7300
+Wire Wire Line
+	4450 7300 4000 7300
+Wire Wire Line
+	2950 7150 4000 7150
+Text GLabel 6250 3750 2    60   Input ~ 0
+RX
+Text GLabel 6250 3850 2    60   Input ~ 0
+TX
+Text GLabel 6250 3950 2    60   Input ~ 0
+DIRECTION
+Text Notes 4150 5200 0    60   ~ 0
+Added connector holes to jump the isolation circuit.\n
+Text Notes 9700 950  0    60   ~ 0
+C.H.I.P cannot be powered\nover this 5V pin.
+Text Notes 10150 3250 0    60   ~ 0
+Extra pins to make\nuse of most of the\natmega. Any ideas?
 $EndSCHEMATC
