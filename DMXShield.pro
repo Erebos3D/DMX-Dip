@@ -1,4 +1,4 @@
-update=29/08/2016 15:08:46
+update=02/09/2016 13:58:46
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=
@@ -61,3 +59,15 @@ LibName29=valves
 LibName30=C:/Program Files/KiCad/share/kicad/library/dc-dc
 LibName31=Libraries/maxim
 LibName32=Libraries/misc
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
+[general]
+version=1
